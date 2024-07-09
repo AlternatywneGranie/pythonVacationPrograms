@@ -1,0 +1,124 @@
+###PASSPORT PROGRAM ####
+import time
+import re
+print("##### PASSPORT PROGRAM #####")
+time.sleep(5)
+
+def get_valid_name(prompt):
+    while True:
+     name = input(prompt)
+
+     if  name.isalpha():
+         return name
+     else:
+        print("That's not a valid name!")
+
+def get_valid_surName(prompt):
+    while True:
+     surName=input(prompt)
+
+     if surName.isalpha():
+        return surName
+     else:
+        print("That's not a valid surname!")
+
+def get_valid_bornAge(prompt):
+    while True:
+     bornAge=input(prompt)
+     if bornAge.isdigit():
+        return bornAge
+     else:
+        print("That's not a valid age!")
+
+def get_valid_sex(prompt):
+    while True:
+     sex=input(prompt)
+     if sex in ["female", "male"]:
+        return sex
+    else:
+        print("That's not a valid sex")
+
+def get_valid_country(prompt):
+    while True:
+     country=input(prompt)
+     if country.isalpha():
+        return country
+    else:
+        print("That's not a valid country!")
+
+def get_valid_email(prompt):
+    while True:
+     email=input(prompt)
+     if re.search(r'@',email) and re.search(r'\.',email):
+        return email
+    else:
+        print("That's not a valid email!")
+
+def get_valid_phone(prompt):
+    while True:
+     phoneNumber=input(prompt)
+     if phoneNumber.isdigit() and not len(phoneNumber) < 9:
+        return phoneNumber
+    else:
+        print("That's not a valid phone number!")
+
+def get_valid_passportNumber(prompt):
+    while True:
+     passportNumber=input(prompt)
+
+     if (re.match(r'^[A-Za-z]{2}', passportNumber[:2]) and passportNumber[2:].isdigit()):
+        return passportNumber
+    else:
+        print("Invalid passport number! First two characters should be alphanumeric and next seven should be digits.")
+
+while True:
+
+ name = get_valid_name("Input your name: ")
+ surName = get_valid_surName("Input your surname: ")
+ bornAge = get_valid_bornAge("Input your bornAge: ")
+ sex = get_valid_sex("Input your sex: ")
+ country = get_valid_country("Input your country: ")
+ email = get_valid_email("Input your email: ")
+ phoneNumber = get_valid_phone("Input your phone number: ")
+ passportNumber = get_valid_passportNumber("Input your passport number: ")
+
+ break
+
+print("Thank you!")
+time.sleep(3)
+print(" ")
+time.sleep(1)
+print("Your passport is generating", end="")
+time.sleep(1)
+print(".",end="",flush=True)
+time.sleep(1)
+print(".",end="",flush=True)
+time.sleep(1)
+print(".")
+time.sleep(3)
+print(" ")
+time.sleep(1)
+print("### PASSPORT ###")
+time.sleep(1)
+print(" ")
+time.sleep(1)
+print("Name: "+ name)
+time.sleep(1)
+print("Surname: "+ surName)
+time.sleep(1)
+print("Born age: "+ bornAge)
+time.sleep(1)
+print("Sex: "+ sex)
+time.sleep(1)
+print("Country: "+ country)
+time.sleep(1)
+print("Email: "+ email)
+time.sleep(1)
+print("Passport Number: "+ passportNumber)
+time.sleep(1)
+print("Phone: "+ phoneNumber)
+time.sleep(1)
+print(" ")
+print("### PASSPORT ENDS ###")
+print(" ")
+time.sleep(3)
