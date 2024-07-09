@@ -1,0 +1,62 @@
+#SIMPLE CALCULATOR
+import time
+
+print("Welcome to Simple Calculator!")
+
+time.sleep(1)
+
+#OPERATORS
+add = "+"
+sub = "-"
+multiply = "*"
+divide = "/"
+
+#IMPORTANT FUNCTIONS
+def firstNumber(fNum):
+    while True:
+        firstNum=input(fNum)
+        if firstNum.isdigit():
+            return int(firstNum)
+        else:
+            print("Please enter a valid number.")
+
+def secondNumber(fNum):
+    while True:
+        secondNum=input(fNum)
+        if secondNum.isdigit():
+            return int(secondNum)
+        else:
+            print("Please enter a valid number.")
+
+def operators(operator):
+    while True:
+        operatorrs=input(operator)
+        if operatorrs in [add, sub, multiply, divide]:
+            return operatorrs
+        else:
+            print("Please enter a valid operator.")
+
+#MAIN LOOP
+while True:
+    fNum=firstNumber("Please enter a first number: ")
+    sNum=firstNumber("Please enter a second number: ")
+    time.sleep(1)
+    operand=operators("Please choose an operator [+, -, *, /] : ")
+
+    if operand == add:
+        result=fNum+sNum
+    elif operand == sub:
+        result=fNum-sNum
+    elif operand == multiply:
+        result=fNum*sNum
+    elif operand == divide and (fNum and sNum != 0):
+        result = fNum/sNum
+
+
+    else:
+        print("Error, try again.")
+        continue
+
+
+    break
+print(f"The result of {fNum} {operand} {sNum} is: {result}")
