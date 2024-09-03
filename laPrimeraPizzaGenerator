@@ -1,0 +1,96 @@
+import random
+
+rodzaj = int(input("Jaki rodzaj pizzy podjąć pod losowanie? : \n1.tradycyjne \n2.światowe i ogniste \n3.wegetariańskie i wyszukane\n"))
+
+if(rodzaj == 1):
+    print("Wybrałeś pizze tradycyjną.")
+    pizzas= ["Margherita", "Capriciosa","Supreme", "Kebab","Carbonara",
+                  "Familijna","Farmerska", "Premium","Espanola",
+                  "Hawajska"]
+elif(rodzaj == 2):
+    print("Wybrałeś pizze światową/ognistą.")
+    pizzas = ["Meksykańska", "Niemiecka","Turecka",
+                  "Indyjska","Peperoni", "Hot Mexico",
+                  "Mafiosso","Ognisty Kurczak", "Góralska",
+                  "Antonio"]
+elif(rodzaj == 3):
+    print("Wybrałeś pizze wegetariańską/wyszukaną")
+    pizzas = ["Serowa","White Garden", "Broccoli",
+                  "Norweska","Marina", "La Primera"]
+else:
+    print("Nie wybrałeś żadnego konkretnego rodzaju pizzy lub wprowadziłeś błędną wartość!")
+    exit(1)
+
+
+#lista dodatkowych składników
+extras = [#wegetariańskie
+    "ananas","ogórek","Sos barbecue (zamiast pomidorowego)","brokuły","oliwki zielone","Sos gyros (zamiast pomidorowego)","cebula","papryka",
+    "cebulka prażona","papryka ostra","curry","pieczarki","Sos śmietanowy (zamiast pomidorowego)","czosnek","pomidor","suszone pomidory",
+    "kukurydza","rukola","ser w bandzie-nie dotyczy pizzy gigant","tabasco","musztarda","Sos arabski pikantny (zamiast pomidorowego","trójkolorowa papryka","żurawina",
+
+    #wędliny
+
+    "bekon","kiełbasa","salami pepperoni","kabanos","kurczak","szynka","kabanos w bandzie-nie dotyczy pizzy gigant","mięso",
+    "szynka","salami","kebab",
+    #sery
+    "extra ser","mozarella","ser favita","lazur","ser górski",
+
+    #owoce morza i ryby
+    "łosoś","tuńczyk"
+
+]
+extras2 = [#wegetariańskie
+    "ananas","ogórek","Sos barbecue (zamiast pomidorowego)","brokuły","oliwki zielone","Sos gyros (zamiast pomidorowego)","cebula","papryka",
+    "cebulka prażona","papryka ostra","curry","pieczarki","Sos śmietanowy (zamiast pomidorowego)","czosnek","pomidor","suszone pomidory",
+    "kukurydza","rukola","ser w bandzie-nie dotyczy pizzy gigant","tabasco","musztarda","Sos arabski pikantny (zamiast pomidorowego","trójkolorowa papryka","żurawina",
+
+    #wędliny
+
+    "bekon","kiełbasa","salami pepperoni","kabanos","kurczak","szynka","kabanos w bandzie-nie dotyczy pizzy gigant","mięso",
+    "szynka","salami","kebab",
+    #sery
+    "extra ser","mozarella","ser favita","lazur","ser górski",
+
+    #owoce morza i ryby
+    "łosoś","tuńczyk"
+
+]
+extras3 = [#wegetariańskie
+    "ananas","ogórek","Sos barbecue (zamiast pomidorowego)","brokuły","oliwki zielone","Sos gyros (zamiast pomidorowego)","cebula","papryka",
+    "cebulka prażona","papryka ostra","curry","pieczarki","Sos śmietanowy (zamiast pomidorowego)","czosnek","pomidor","suszone pomidory",
+    "kukurydza","rukola","ser w bandzie-nie dotyczy pizzy gigant","tabasco","musztarda","Sos arabski pikantny (zamiast pomidorowego","trójkolorowa papryka","żurawina",
+
+    #wędliny
+
+    "bekon","kiełbasa","salami pepperoni","kabanos","kurczak","szynka","kabanos w bandzie-nie dotyczy pizzy gigant","mięso",
+    "szynka","salami","kebab",
+    #sery
+    "extra ser","mozarella","ser favita","lazur","ser górski",
+
+    #owoce morza i ryby
+    "łosoś","tuńczyk"
+
+]
+extras4 = [#wegetariańskie
+    "ananas","ogórek","Sos barbecue (zamiast pomidorowego)","brokuły","oliwki zielone","Sos gyros (zamiast pomidorowego)","cebula","papryka",
+    "cebulka prażona","papryka ostra","curry","pieczarki","Sos śmietanowy (zamiast pomidorowego)","czosnek","pomidor","suszone pomidory",
+    "kukurydza","rukola","ser w bandzie-nie dotyczy pizzy gigant","tabasco","musztarda","Sos arabski pikantny (zamiast pomidorowego","trójkolorowa papryka","żurawina",
+
+    #wędliny
+
+    "bekon","kiełbasa","salami pepperoni","kabanos","kurczak","szynka","kabanos w bandzie-nie dotyczy pizzy gigant","mięso",
+    "szynka","salami","kebab",
+    #sery
+    "extra ser","mozarella","ser favita","lazur","ser górski",
+
+    #owoce morza i ryby
+    "łosoś","tuńczyk"
+
+]
+#losowanie pizzy
+chosen_pizza = random.choice(pizzas)
+extras_pizza2 = random.choice(extras)
+extras_pizza3 = random.choice(extras2)
+extras_pizza4 = random.choice(extras3)
+extras_pizza = random.choice(extras4)
+print("Dzisiaj polecamy pizze : \n".upper() + "\n" + chosen_pizza + "\n\nPolecamy dodatkowe składniki : \n".upper() + "1."+extras_pizza + "\n" + "2." + extras_pizza2 + "\n" + "3." + extras_pizza3 + "\n" + "4." + extras_pizza4)
